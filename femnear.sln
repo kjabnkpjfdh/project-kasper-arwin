@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "femnear", "femnear\femnear.csproj", "{3156EA06-07BC-4EE4-9A62-8ACC9CD87E81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3156EA06-07BC-4EE4-9A62-8ACC9CD87E81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3156EA06-07BC-4EE4-9A62-8ACC9CD87E81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3156EA06-07BC-4EE4-9A62-8ACC9CD87E81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3156EA06-07BC-4EE4-9A62-8ACC9CD87E81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B10DA5D-A1A3-43B3-AD4B-AF8A0B5D71A4}
+	EndGlobalSection
+EndGlobal
