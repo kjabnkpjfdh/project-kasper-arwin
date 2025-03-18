@@ -1,4 +1,6 @@
-﻿namespace femnear
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace femnear
 {
     public class Datapersonen
     {
@@ -11,6 +13,7 @@
 
         public int LocatieID { get; set; }
 
+        [Key]
         public int PersoonID { get; set; }
     }
 }
