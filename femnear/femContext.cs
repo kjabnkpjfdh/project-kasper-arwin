@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
-using femnear;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace femnear
 {

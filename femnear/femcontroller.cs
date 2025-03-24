@@ -26,11 +26,18 @@ namespace femnear
         [HttpPost]
         public void AddPersonen([FromBody] Datapersonen value)
         {
-            var personen = value;// new MijnTabel { Naam = value.Naam };
-            _context.Add(personen);
+            //var personen = value;// new MijnTabel { Naam = value.Naam };
+            _context.Datapersonen.Add(value);
             _context.SaveChangesAsync();
         }
 
-
+        [HttpDelete]
+        public void DelPersonen(int id)
+        {
+            var lijstValue = _context.Datapersonen.Where(a => a.PersoonID == id);
+            var valueSingle = lijstValue.FirstOrDefault() as Datapersonen;
+            _context.Remove(valueSingle);
+            _context.SaveChangesAsync();
+        }
     }
 }
