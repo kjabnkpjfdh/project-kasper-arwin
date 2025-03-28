@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<femContext>(options =>
-    options.UseSqlServer("Server = SLCB22 - 0014; Database = SchoolDB; Trusted_Connection = True; MultipleActiveResultSets = true; Encrypt = false"));
+    options.UseSqlServer("Data Source=SLCB22-0014;Initial Catalog=SchoolDB;Integrated Security=True;Encrypt=False"));
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
