@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personen Beheer</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f9d423, #ff4e50); 
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1.05); 
+        }
+        input, button {
+            margin: 15px 0;
+            padding: 15px;
+            width: 90%;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        input {
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #00bcd4;
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #00796b; 
+        }
+        .personen {
+            background: #80deea;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 1.2rem;
+        }
+        #account-form, #account-form2, #delete-form {
+            display: none;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        #delete-form {
+            background: #ff8a80; 
+        }
+        #show-account-form, #show-account-form2 {
+            margin: 20px;
+            background: #f44336;
+            color: white;
+            font-size: 1.2rem;
+            padding: 12px 25px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        #show-account-form:hover, #show-account-form2:hover {
+            background: #d32f2f;
+        }
+        #show-account-form, #show-account-form2 {
+            display: block;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Beheer Personen</h1>
+    <div class="container">
+        <button id="load-personen">Laad Personen</button>
+        <div id="personen-list"></div>
+
+       
+        <button id="show-account-form">Verwijder een account</button>
+        <div id="account-form">
+            <h2>Persoon Verwijderen</h2>
+            <input type="text" id="new-personen-LocatieID" placeholder="persoonID">
+            <button id="delete-account">Verwijder</button>
+        </div>
+
+        <button id="show-account-form2">Maak een Account</button>
+        <div id="account-form2">
+            <h2>Nieuwe Persoon Toevoegen</h2>
+            <input type="text" id="new-personen-Voornaam" placeholder="Voornaam">
+            <input type="text" id="new-personen-Achternaam" placeholder="Achternaam">
+            <input type="number" id="new-personen-Leeftijd" placeholder="Leeftijd">
+            <input type="text" id="new-personen-LocatieID" placeholder="Locatie ID">
+            <button id="create-account">Voeg Toe</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("show-account-form").addEventListener("click", function() {
+            document.getElementById("account-form").style.display = "block";
+            this.style.display = "none";
+        });
+
+        document.getElementById("show-account-form2").addEventListener("click", function() {
+            document.getElementById("account-form2").style.display = "block";
+            this.style.display = "none";
+        });
+    </script>
+    <script src="Gproject.js"></script>
+    
+    <div id="delete-form">
+        <h2>Verwijder Persoon</h2>
+        <input type="number" id="delete-personen-ID" placeholder="Voer ID in om te verwijderen">
+        <button id="delete-account">Verwijder</button>
+    </div>
+
+</body>
+</html>

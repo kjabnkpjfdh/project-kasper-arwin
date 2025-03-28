@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace femnear
@@ -23,6 +24,7 @@ namespace femnear
             return await _context.Datapersonen.ToListAsync();
         }
 
+
         [HttpPost]
         public void AddPersonen([FromBody] Datapersonen value)
         {
@@ -36,7 +38,14 @@ namespace femnear
         {
             var lijstValue = _context.Datapersonen.Where(a => a.PersoonID == id);
             var valueSingle = lijstValue.FirstOrDefault() as Datapersonen;
-            _context.Remove(valueSingle);
+            _context.Datapersonen.Remove(valueSingle);
+            _context.SaveChangesAsync();
+        }
+
+        [HttpPut]
+        public void changeInventory([FromBody] Datapersonen inventoryItem)
+        {
+            _context.Datapersonen.Update(inventoryItem);
             _context.SaveChangesAsync();
         }
     }
